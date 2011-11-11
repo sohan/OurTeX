@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <link href="/site_media/style.css" rel="stylesheet" type="text/css" /> 
+    {% block headjs %}
+    {% endblock %}
+</head>
+
+<header>
+{% block header %}
+{% endblock %}
+</header>
+<body>
+    
+    <div id="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+
+<footer>
+{% block footer %}
+{% endblock %}
+</footer>
+
+</html>

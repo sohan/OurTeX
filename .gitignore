@@ -1,0 +1,6 @@
+test/
+db.sqlite
+*.pyc
+ourtex/*.tex
+mobwrite_appengine/
+compiled/*

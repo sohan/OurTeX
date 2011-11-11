@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block headjs %}
+    <script type="text/javascript" src="/site_media/script.js"></script>
+
+    <SCRIPT SRC="http://mobwrite3.appspot.com/static/compressed_form.js"></SCRIPT>
+    <SCRIPT>
+      mobwrite.syncGateway = 'http://mobwrite3.appspot.com/scripts/q.py';
+      mobwrite.minSyncInterval = 250;
+      mobwrite.syncInterval = 500;
+    </SCRIPT>
+    <BODY ONLOAD="mobwrite.share('{{ doc.mobwrite_formid }}');">
+    <script type="text/javascript">
+        formid = '{{ doc.mobwrite_formid }}';
+        contents = '{{ docVersion.contents|escapejs }}';
+    </script>
+{% endblock %}
+
+{% block header %}
+    <button id="compile">Compile</button>
+    <button id="save">Save</button>
+{% endblock %}
+
+{% block content %}
+    <div class="left_pane">
+        <textarea id="latex_editor">
+        </textarea>
+    </div>
+
+    <div class="right_pane">
+    <div id="menu">
+    <ul>
+        <li><a href="#" title="pdf">Pdf</a></li>
+        <li><a href="#" title="log">Log</a></li>
+    </ul>
+    </div>
+
+        <object src="" type="application/pdf" 
+            title="latex" width=100% height=100%
+            id = "latex_pdf"
+            class = "visible">
+            Compile a pdf!
+        </object>
+
+        <div id="log" class = "invisible"><p></p></div>
+    </div>
+{%endblock%}
+
+{% block footer %}
+{% endblock %}

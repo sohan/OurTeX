@@ -1,0 +1,85 @@
+body {
+    height:100%;
+}
+
+header {
+    width:100%;
+    background:gray;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+#content {
+    width:100%;
+}
+
+.left_pane {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.right_pane {
+    float: right;
+    width: 50%;
+    height: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+#menu {
+    width:100%;
+}
+
+#menu ul {
+    list-style:none;
+}
+
+#menu ul li {
+    display:inline;
+    float:left;
+}
+
+#menu ul li a { padding:20px; background: rgba(255,138,30,0.3); text-decoration: none; font: bold 14px Helvetica, Sans-Serif; letter-spacing: -1px; color: #402e16;
+    text-shadow: #eee 0px 0px 2px; }
+
+/* :first-child pseudo selector with rounded top left corner */
+#menu ul li:first-child a { -moz-border-radius-topleft: 12px; -webkit-border-top-left-radius:12px; }
+ 
+/* :last-child pseudo selector with rounded top right corner */
+#menu ul li:last-child a { -moz-border-radius-topright: 12px; -webkit-border-top-right-radius:12px; }
+
+/* hover state shows a linear gradient and opacity it brought down to 0.9 and also shows a very slight grey shadow on top */
+#menu ul li a:hover { -moz-box-shadow: 0 -5px 10px #777; -webkit-box-shadow: 0 -5px 10px #777;
+   background: -webkit-gradient(
+      linear, right bottom, left top, color-stop(0, rgb(237,227,112)), color-stop(0.72, rgb(255,173,10))) !important;
+   background: -moz-linear-gradient(
+      right bottom, rgb(237,227,112) 0%, rgb(255,173,10) 72%) !important;
+   background-color:rgb(255,173,10) !important;
+   -moz-opacity:.90; filter:alpha(opacity=90); opacity:.90; }
+ 
+/* another RGBA background, now with an opacity of 0.8 */
+#menu ul li a.active { background: rgba(255,138,30,0.8) !important; }
+
+#latex_editor {
+    height:100%;
+    width: 100%;
+}
+
+#latex_pdf {
+    height: 98%;
+    width: 100%;
+}
+
+.visible {
+    display:block;
+}
+
+.invisible {
+    display:none;
+}
